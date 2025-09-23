@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PASCOM Sagrado Coração de Jesus</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <div class="particles" id="particles"></div>
+
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo-title-wrap">
+        <div class="logo-container">
+          <img src="images/logo-pascom.png" alt="Logo PASCOM" class="logo">
+        </div>
+        <div class="title-wrap">
+          <h1>PASCOM<br/><span>Sagrado Coração de Jesus</span></h1>
+          <p class="slogan">Evangelizar na era digital</p>
+        </div>
+      </div>
+      <div class="cta-wrap">
+        <div class="socials">
+          <a href="https://wa.me/seunumerowhatsapp" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://instagram.com/seuusuario" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="info">
+      <div class="card">
+        <h2><i class="fas fa-info-circle"></i>Sobre</h2>
+        <p>A Pastoral da Comunicação de nossa paróquia tem como missão evangelizar através dos meios de comunicação modernos, levando a palavra de Deus a todos os cantos da nossa comunidade.</p>
+      </div>
+
+      <div class="card">
+        <h2><i class="fas fa-heart"></i>Missão</h2>
+        <p>Servir à Igreja através dos meios de comunicação, promovendo a evangelização digital e fortalecendo os laços da comunidade católica.</p>
+      </div>
+
+      <div class="card">
+        <h2><i class="fas fa-history"></i>Histórico</h2>
+        <p>Conheca a rica história da nossa paróquia, que tem suas raízes profundas na fé e tradição católica de nossa comunidade.</p>
+      </div>
+    </div>
+
+    <div class="accordion card">
+      <button class="accordion-title" onclick="toggleAccordion(this)">
+        <span>Breve Histórico</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="accordion-content">
+        <h3>Paróquia Sagrado Coração de Jesus</h3>
+        <p><strong>Criação:</strong> 02-10-1900</p>
+        <p>A história da paróquia do Sagrado Coração de Jesus, em Serraria-PB, nasceu da fé em Deus e com o poder dos senhores de engenho. A criação da Paróquia Sagrado coração de Jesus acompanha o processo histórico de criação do município, que na ocasião era conhecido como Villa de Serraria (conforme relata o livro de Tombo de nossa Paróquia) devido seu primeiro estabelecimento ter sido uma serralharia erguida onde, atualmente está situada a Igreja Matriz.</p>
+        <p><strong>Primeiros eventos ocorridos na paróquia:</strong></p>
+        <ul>
+          <li>1906 – Primeira pastoral do Bispo D. Adauto em Serraria; bênção da Matriz e a definitiva transferência da Sede paroquial;</li>
+          <li>1925 – Foi importado da Alemanha 5.000#000 (cinco mil réis) para instalação do relógio, doados pelo Major Antonio Bento Duarte dos Santos;</li>
+          <li>1950 – Tríduo das vocações sacerdotais; e ordenação de Padre Manoel Batista. A primeira no município;</li>
+          <li>1967 – Destruição dos Quatro altares laterais e o altar-Mor, retirado do coro lateral e a escada retirados pelo Pe. José Paulino.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion card">
+      <button class="accordion-title" onclick="toggleAccordion(this)">
+        <span>Padres da Paróquia de Serraria</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="accordion-content">
+        <ul class="priests-list">
+          <li><strong>02-10-1900</strong> – João Cavalcante de Albuquerque Maranhão</li>
+          <li><strong>13-04-1913</strong> – Manoel Cristovam Ribeiro Ventura</li>
+          <li><strong>20-06-1913</strong> – Antonio Francisco de Barros Ramalho</li>
+          <li><strong>02-03-1919</strong> – Jorge Borges Sales</li>
+          <li><strong>04-02-1923</strong> – Gentil de Barros Moreira</li>
+          <li><strong>03-02-1928</strong> – Cônego Pedro Cardoso</li>
+          <li><strong>03-03-1941</strong> – Antonio Costa</li>
+          <li><strong>12-09-1943</strong> – Cônego José Betânio de Gouveia Nóbrega</li>
+          <li><strong>16-01-1944</strong> – Edgar Toscano</li>
+          <li><strong>06-03-1946</strong> – Cônego Theodomiro de Queirós</li>
+          <li><strong>23-01-1949</strong> – Cornélio Farias Belo</li>
+          <li><strong>05-08-1960</strong> – Hidelbrando Rodrigues de Oliveira</li>
+          <li><strong>09-11-1962</strong> – Aloísio Catão Torquato</li>
+          <li><strong>26-03-1967</strong> – José Paulino Batista</li>
+          <li><strong>01-01-1968</strong> – João Maria Cauchi</li>
+          <li><strong>23-06-1968</strong> – Conrado Wynannds</li>
+          <li><strong>17-04-1994</strong> – Severino Marques de Farias</li>
+          <li><strong>07-04-2002</strong> – Frei Domingos Fragoso</li>
+          <li><strong>21-02-2005</strong> – Dom Epaminondas José de Araújo</li>
+          <li><strong>27-08-2006</strong> – Bernardo Alves da Silva</li>
+          <li><strong>10-02-2008</strong> – João Batista da Silva</li>
+          <li><strong>20-02-2015</strong> – Pedro Alexandre da Silva</li>
+          <li><strong>09-11-2016</strong> – Iran de Sousa Ferreira</li>
+          <li><strong>17-07-2019</strong> – Paulo Roberto da Silva</li>
+          <li><strong>21-12-2021</strong> – Paulo José de Lima</li>
+          <li><strong>29-06-2025</strong> – Heriberto Gomes da Costa</li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="priest-profile card">
+      <h2><i class="fas fa-user"></i> Pe. Heriberto Gomes da Costa</h2>
+      <div class="profile-container">
+        <div class="profile-photo">
+          <img src="images/heriberto.svg" alt="Pe. Heriberto Gomes da Costa">
+        </div>
+        <div class="profile-info">
+          <p><strong>Nome:</strong> Heriberto Gomes da Costa</p>
+          <p><strong>Nascimento:</strong> Guarabira – 04 de setembro de 1978</p>
+          <p><strong>Ordenação Diaconal:</strong> Guarabira – 23 de junho de 2010</p>
+          <p><strong>Ordenação Presbiteral:</strong> Guarabira – 25 de janeiro de 2011</p>
+          <p><strong>Administrador Paroquial:</strong> Paróquia Stº. Antônio, Mulungu (2011 – 2017)</p>
+          <p><strong>Pároco:</strong> Paróquia Nossa Senhora do Rosário de Caiçara (07 de abril de 2017)</p>
+          <p><strong>Assistente Eclesiástico Diocesano da Liturgia:</strong> 2011 – 2018</p>
+          <p><strong>Vigário Forâneo:</strong> Pirpirituba – 2017</p>
+          <p><strong>Membro do Conselho Presbiteral da Diocese de Guarabira:</strong> desde 2017</p>
+          <p><strong>Membro do Colégio dos Consultores da Diocese de Guarabira:</strong> desde 2017</p>
+          <p><strong>Administrador Paroquial:</strong> São José Operário – João Pessoa (09 de janeiro de 2019)</p>
+          <p><strong>Referencial da Juventude da Forania Urbana Sul – João Pessoa:</strong> 2021</p>
+          <p><strong>Assistente Eclesiástico da Juventude da Arquidiocese da Paraíba:</strong> 2022</p>
+          <p><strong>Vigário Paroquial:</strong> São Sebastião de Araçagi (2023 – 2024)</p>
+          <p><strong>Administrador Paroquial:</strong> Sagrado Coração de Jesus – Serraria, PB (29 de junho de 2025)</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="galeria card">
+      <h2><i class="fas fa-images"></i> Galeria</h2>
+      <div class="fotos">
+        <img src="images/foto1.svg" alt="Foto 1 - Evento PASCOM">
+        <img src="images/foto2.svg" alt="Foto 2 - Igreja Sagrado Coração">
+        <img src="images/foto3.svg" alt="Foto 3 - Membros da PASCOM">
+        <img src="images/foto4.svg" alt="Foto 4 - Evento PASCOM">
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 PASCOM Sagrado Coração de Jesus - Evangelizando na era digital</p>
+  </footer>
+
+  script src="script.js"></script>
+</body>
+</html>
