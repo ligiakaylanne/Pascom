@@ -1,0 +1,39 @@
+/* Estilo do cartão de horários das missas */
+.missa-card {
+  background: #fff7f7; /* fundo suave */
+  border-left: 6px solid #c62828; /* borda lateral */
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center; /* centraliza todo o conteúdo */
+}
+
+.missa-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.missa-card h2 {
+  color: #c62828;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center; /* centraliza ícone e título */
+  align-items: center;
+  gap: 8px;
+}
+
+.missa-card ul {
+  list-style-type: none !important; /* remove bolinhas */
+  padding: 0;
+  margin: 0;
+}
+
+.missa-card li {
+  font-size: 1rem;
+  margin: 0.5rem 0.3rem;
+  line-height: 1.6;
+  display: inline-block; /* cada horário como bloco */
+  background: #ffcdd2; /* destaque do bloco */
+  color: #b71c1c;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
