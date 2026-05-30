@@ -1,73 +1,83 @@
-    // Accordion functionality
-    function toggleAccordion(button) {
-      const content = button.nextElementSibling;
-      const isActive = button.classList.contains('active');
-      
-      // Close all other accordions
-      document.querySelectorAll('.accordion-title').forEach(btn => {
-        btn.classList.remove('active');
-        btn.nextElementSibling.classList.remove('active');
-        btn.nextElementSibling.style.maxHeight = '0';
-      });
-      
-      if (!isActive) {
-        button.classList.add('active');
-        content.classList.add('active');
-        content.style.maxHeight = content.scrollHeight + 'px';
+'use strict';
+
+/* ─── Accordion ─── */
+document.querySelectorAll('.accordion-btn').forEach(btn => {
+  const panelId = btn.getAttribute('aria-controls');
+  const panel   = document.getElementById(panelId);
+  if (!panel) return;
+
+  // Start closed
+  panel.hidden = false;
+  panel.style.maxHeight = '0';
+  panel.classList.remove('open');
+
+  btn.addEventListener('click', () => {
+    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+    // Close all
+    document.querySelectorAll('.accordion-btn').forEach(b => {
+      const p = document.getElementById(b.getAttribute('aria-controls'));
+      b.setAttribute('aria-expanded', 'false');
+      if (p) {
+        p.style.maxHeight = '0';
+        p.classList.remove('open');
       }
-    }
-
-    // Create floating particles
-    function createParticles() {
-      const particlesContainer = document.getElementById('particles');
-      const particleCount = 15;
-      
-      for (let i = 0; i < particleCount; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        
-        // Random size
-        const size = Math.random() * 6 + 3;
-        particle.style.width = size + 'px';
-        particle.style.height = size + 'px';
-        
-        // Random position
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.top = Math.random() * 100 + '%';
-        
-        // Random animation delay
-        particle.style.animationDelay = Math.random() * 15 + 's';
-        
-        // Random animation duration
-        particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-        
-        particlesContainer.appendChild(particle);
-      }
-    }
-
-    // Initialize particles on page load
-    document.addEventListener('DOMContentLoaded', createParticles);
-
-    // Smooth scroll for better UX
-    document.documentElement.style.scrollBehavior = 'smooth';
-
-    // Add intersection observer for animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
-        }
-      });
-    }, observerOptions);
-
-    // Observe all cards
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.card').forEach(card => {
-        observer.observe(card);
-      });
     });
+
+    // Open this one if it was closed
+    if (!isOpen) {
+      btn.setAttribute('aria-expanded', 'true');
+      panel.classList.add('open');
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+    }
+  });
+});
+
+/* ─── Lightbox ─── */
+const lightbox = document.getElementById('lightbox');
+const lbImg    = document.getElementById('lb-img');
+const lbClose  = document.getElementById('lb-close');
+
+function openLightbox(src, alt) {
+  lbImg.src = src;
+  lbImg.alt = alt || '';
+  lightbox.hidden = false;
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  lightbox.hidden = true;
+  lbImg.src = '';
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.gallery-item').forEach(item => {
+  item.addEventListener('click', () => {
+    const img = item.querySelector('img');
+    if (img) openLightbox(img.src, img.alt);
+  });
+});
+
+lbClose?.addEventListener('click', closeLightbox);
+lightbox?.addEventListener('click', e => {
+  if (e.target === lightbox) closeLightbox();
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && !lightbox.hidden) closeLightbox();
+});
+
+/* ─── Scroll fade-in ─── */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+document.querySelectorAll('.card, .accordion-btn, .drive-card, .priest-card, .gallery-item').forEach((el, i) => {
+  el.classList.add('fade-in-up');
+  el.style.transitionDelay = (i * 40) + 'ms';
+  observer.observe(el);
+});

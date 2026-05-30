@@ -2,167 +2,265 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Paróquia Sagrado Coração de Jesus</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <title>Paróquia Sagrado Coração de Jesus – Serraria, PB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="particles" id="particles"></div>
 
+  <!-- Ambient background -->
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+  </div>
+
+  <!-- ── HEADER ── -->
   <header class="header">
+    <div class="header-glow" aria-hidden="true"></div>
+    <div class="header-cross-pattern" aria-hidden="true"></div>
+
     <div class="header-inner">
-      <div class="logo-title-wrap">
-        <div class="logo-container">
-          <img src="images/BRASÃO.JPG" alt="Logo PASCOM" class="logo">
+      <div class="header-brand">
+        <div class="logo-wrap">
+          <img
+            src="https://raw.githubusercontent.com/ligiakaylanne/Pascom/maim/images/BRAS%C3%83O.JPG"
+            alt="Brasão da Paróquia"
+            class="logo"
+          />
+          <div class="logo-ring" aria-hidden="true"></div>
         </div>
-        <div class="title-wrap">
-          <h1>PARÓQUIA<br/><span>Sagrado Coração de Jesus</span></h1>
-          <p class="slogan">Serraria-PB</p>
-        </div>
-      </div>
-      <div class="cta-wrap">
-        <div class="socials">
-          <a href="https://wa.me/558396040194" target="_blank" aria-label="WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-          </a>
-          <a href="https://instagram.com/pascomscj_serraria" target="_blank" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
+
+        <div class="header-text">
+          <p class="header-eyebrow">Paróquia</p>
+          <h1 class="header-title">Sagrado Coração<br><span>de Jesus</span></h1>
+          <p class="header-sub">Serraria · PB</p>
         </div>
       </div>
-    </div>
-  </header>
 
-  <main class="container">
-    <div class="info">
-      <div class="card">
-        <h2><i class="fas fa-info-circle"></i>Sobre</h2>
-        <p>A Pastoral da Comunicação de nossa paróquia tem como missão evangelizar através dos meios de comunicação modernos, levando a palavra de Deus a todos os cantos da nossa comunidade.</p>
-      </div>
-
-      <div class="card">
-        <h2><i class="fas fa-heart"></i>Missão</h2>
-        <p>Servir à Igreja através dos meios de comunicação, promovendo a evangelização digital e fortalecendo os laços da comunidade católica.</p>
-      </div>
-
-      <div class="card">
-        <h2><i class="fas fa-history"></i>Histórico</h2>
-        <p>Conheça a rica história da nossa paróquia, que tem suas raízes profundas na fé e tradição católica de nossa comunidade.</p>
-      </div>
-
-      <!-- Cartão de Horários das Missas -->
-      <div class="card missa-card">
-        <h2><i class="fas fa-church"></i> Horários das Missas</h2>
-        <ul style="list-style: none; padding: 0; margin: 0;">
-          <li><strong>Quarta-feira:</strong> 19h</li>
-          <li><strong>Domingo:</strong> 8h e 19h</li>
-          <li><strong>Quinta-feira:</strong> 19h – Adoração ao Santíssimo</li>
-          <li><strong>Missa das Crianças:</strong> 15h – 2º Domingo</li>
-        </ul>
-      </div>
-
-      <!-- Cartão Google Drive -->
-      <div class="card drive-card">
-        <h2><i class="fab fa-google-drive"></i> Materiais &amp; Arquivos</h2>
-        <p>Acesse fotos da nossa paróquia no Google Drive.</p>
-        <a
-          href="https://drive.google.com/drive/folders/1R-YSThyZUiRDbKyX3F0u86c7AaueCDuK"
-          target="_blank"
-          rel="noopener"
-          class="drive-btn"
-        >
-          <i class="fab fa-google-drive"></i> Abrir Google Drive
+      <div class="header-actions">
+        <a href="https://wa.me/558396040194" target="_blank" rel="noopener" class="social-btn whatsapp" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://instagram.com/pascomscj_serraria" target="_blank" rel="noopener" class="social-btn instagram" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
         </a>
       </div>
     </div>
 
-    <div class="accordion card">
-      <button class="accordion-title" onclick="toggleAccordion(this)">
-        <span>Breve Histórico</span>
-        <i class="fas fa-chevron-down"></i>
-      </button>
-      <div class="accordion-content">
-        <h3>Paróquia Sagrado Coração de Jesus</h3>
-        <p><strong>Criação:</strong> 02-10-1900</p>
-        <p>A história da paróquia do Sagrado Coração de Jesus, em Serraria-PB, nasceu da fé em Deus e com o poder dos senhores de engenho. A criação da Paróquia Sagrado coração de Jesus acompanha o processo histórico de criação do município, que na ocasião era conhecido como Villa de Serraria (conforme relata o livro de Tombo de nossa Paróquia) devido seu primeiro estabelecimento ter sido uma serralharia erguida onde, atualmente está situada a Igreja Matriz.</p>
-        <p><strong>Primeiros eventos ocorridos na paróquia:</strong></p>
-        <ul>
-          <li>1906 – Primeira pastoral do Bispo D. Adauto em Serraria; bênção da Matriz e a definitiva transferência da Sede paroquial;</li>
-          <li>1925 – Foi importado da Alemanha 5.000#000 (cinco mil réis) para instalação do relógio, doados pelo Major Antonio Bento Duarte dos Santos;</li>
-          <li>1950 – Tríduo das vocações sacerdotais; e ordenação de Padre Manoel Batista. A primeira no município;</li>
-          <li>1967 – Destruição dos Quatro altares laterais e o altar-Mor, retirado do coro lateral e a escada retirados pelo Pe. José Paulino.</li>
-        </ul>
+    <!-- Mass schedule pill strip -->
+    <div class="mass-strip">
+      <div class="mass-strip-inner">
+        <div class="mass-pill"><i class="fas fa-church"></i><span><strong>Qua</strong> 19h</span></div>
+        <div class="mass-pill"><i class="fas fa-church"></i><span><strong>Dom</strong> 8h · 19h</span></div>
+        <div class="mass-pill"><i class="fas fa-star"></i><span><strong>Qui</strong> 19h Adoração</span></div>
+        <div class="mass-pill"><i class="fas fa-child"></i><span><strong>2º Dom</strong> 15h Crianças</span></div>
       </div>
     </div>
+  </header>
 
-    <div class="accordion card">
-      <button class="accordion-title" onclick="toggleAccordion(this)">
-        <span>Padres da Paróquia de Serraria</span>
-        <i class="fas fa-chevron-down"></i>
-      </button>
-      <div class="accordion-content">
-        <ul class="priests-list">
-          <li><strong>02-10-1900</strong> – João Cavalcante de Albuquerque Maranhão</li>
-          <li><strong>13-04-1913</strong> – Manoel Cristovam Ribeiro Ventura</li>
-          <li><strong>20-06-1913</strong> – Antonio Francisco de Barros Ramalho</li>
-          <li><strong>02-03-1919</strong> – Jorge Borges Sales</li>
-          <li><strong>04-02-1923</strong> – Gentil de Barros Moreira</li>
-          <li><strong>03-02-1928</strong> – Cônego Pedro Cardoso</li>
-          <li><strong>03-03-1941</strong> – Antonio Costa</li>
-          <li><strong>12-09-1943</strong> – Cônego José Betânio de Gouveia Nóbrega</li>
-          <li><strong>16-01-1944</strong> – Edgar Toscano</li>
-          <li><strong>06-03-1946</strong> – Cônego Theodomiro de Queirós</li>
-          <li><strong>23-01-1949</strong> – Cornélio Farias Belo</li>
-          <li><strong>05-08-1960</strong> – Hidelbrando Rodrigues de Oliveira</li>
-          <li><strong>09-11-1962</strong> – Aloísio Catão Torquato</li>
-          <li><strong>26-03-1967</strong> – José Paulino Batista</li>
-          <li><strong>01-01-1968</strong> – João Maria Cauchi</li>
-          <li><strong>23-06-1968</strong> – Conrado Wynannds</li>
-          <li><strong>17-04-1994</strong> – Severino Marques de Farias</li>
-          <li><strong>07-04-2002</strong> – Frei Domingos Fragoso</li>
-          <li><strong>21-02-2005</strong> – Dom Epaminondas José de Araújo</li>
-          <li><strong>27-08-2006</strong> – Bernardo Alves da Silva</li>
-          <li><strong>10-02-2008</strong> – João Batista da Silva</li>
-          <li><strong>20-02-2015</strong> – Pedro Alexandre da Silva</li>
-          <li><strong>09-11-2016</strong> – Iran de Sousa Ferreira</li>
-          <li><strong>17-07-2019</strong> – Paulo Roberto da Silva</li>
-          <li><strong>21-12-2021</strong> – Paulo José de Lima</li>
-          <li><strong>29-06-2025</strong> – Heriberto Gomes da Costa</li>
-        </ul>
+  <!-- ── MAIN ── -->
+  <main class="main">
+
+    <!-- Info cards -->
+    <section class="section" aria-label="Informações">
+      <div class="cards-grid">
+        <article class="card card--icon">
+          <div class="card-icon-wrap"><i class="fas fa-info-circle"></i></div>
+          <h2>Sobre</h2>
+          <p>A Pastoral da Comunicação evangeliza através dos meios de comunicação modernos, levando a palavra de Deus a toda a nossa comunidade.</p>
+        </article>
+
+        <article class="card card--icon">
+          <div class="card-icon-wrap"><i class="fas fa-heart"></i></div>
+          <h2>Missão</h2>
+          <p>Servir à Igreja promovendo a evangelização digital e fortalecendo os laços da comunidade católica.</p>
+        </article>
+
+        <article class="card card--icon">
+          <div class="card-icon-wrap"><i class="fas fa-history"></i></div>
+          <h2>Histórico</h2>
+          <p>Conheça a rica história da nossa paróquia, enraizada na fé e tradição católica de Serraria desde 1900.</p>
+        </article>
       </div>
-    </div>
 
-    <section class="priest-profile card">
-      <h2><i class="fas fa-user"></i> Pe. Heriberto Gomes da Costa</h2>
-      <div class="profile-container">
-        <div class="profile-photo">
-          <img src="images/IMG_3785.JPEG" alt="Pe. Heriberto Gomes da Costa">
+      <!-- Drive card -->
+      <a
+        href="https://drive.google.com/drive/folders/1R-YSThyZUiRDbKyX3F0u86c7AaueCDuK"
+        target="_blank"
+        rel="noopener"
+        class="drive-card"
+        aria-label="Abrir Google Drive da paróquia"
+      >
+        <div class="drive-card-inner">
+          <div class="drive-icon"><i class="fab fa-google-drive"></i></div>
+          <div class="drive-text">
+            <strong>Materiais &amp; Arquivos</strong>
+            <span>Fotos e documentos da paróquia</span>
+          </div>
+          <div class="drive-arrow"><i class="fas fa-arrow-right"></i></div>
         </div>
-        <div class="profile-info">
-          <p><strong>Administrador Paroquial:</strong> Sagrado Coração de Jesus – Serraria, PB (29 de junho de 2025)</p>
+      </a>
+    </section>
+
+    <!-- Accordion: Histórico -->
+    <section class="section">
+      <button class="accordion-btn" aria-expanded="false" aria-controls="acc-historico">
+        <span class="acc-icon"><i class="fas fa-book-open"></i></span>
+        <span class="acc-label">Breve Histórico</span>
+        <span class="acc-chevron"><i class="fas fa-chevron-down"></i></span>
+      </button>
+      <div class="accordion-panel" id="acc-historico" role="region" hidden>
+        <div class="accordion-body">
+          <h3 class="acc-heading">Paróquia Sagrado Coração de Jesus</h3>
+          <p class="acc-meta"><i class="fas fa-calendar-alt"></i> Criação: <strong>02 de outubro de 1900</strong></p>
+          <p>A história da paróquia nasceu da fé em Deus e com o poder dos senhores de engenho. Sua criação acompanha o processo histórico de fundação do município, então conhecido como Villa de Serraria, onde estava situada uma serralharia no local da atual Igreja Matriz.</p>
+          <ul class="timeline">
+            <li><span class="tl-year">1906</span><span>Primeira pastoral do Bispo D. Adauto; bênção da Matriz e definitiva transferência da Sede paroquial.</span></li>
+            <li><span class="tl-year">1925</span><span>Importação do relógio da Alemanha (5.000 réis), doado pelo Major Antonio Bento Duarte dos Santos.</span></li>
+            <li><span class="tl-year">1950</span><span>Tríduo das vocações sacerdotais e ordenação de Pe. Manoel Batista — a primeira do município.</span></li>
+            <li><span class="tl-year">1967</span><span>Destruição dos quatro altares laterais e do altar-mor pelo Pe. José Paulino.</span></li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section class="galeria card">
-      <h2><i class="fas fa-images"></i> Galeria</h2>
-      <div class="fotos">
-        <img src="images/IMG_7068.png" alt="Foto 2 - Igreja Sagrado Coração">
-        <img src="images/IMG_7434.png" alt="Foto 3 - Membros da PASCOM">
-        <img src="images/IMG_5531.png" alt="Foto 4 - Evento PASCOM">
-        <img src="images/IMG_4229.png" alt="Foto 1 - Evento PASCOM">
-        <img src="images/IMG_3455.png" alt="Foto 1 - Evento PASCOM">
+    <!-- Accordion: Padres -->
+    <section class="section">
+      <button class="accordion-btn" aria-expanded="false" aria-controls="acc-padres">
+        <span class="acc-icon"><i class="fas fa-cross"></i></span>
+        <span class="acc-label">Padres da Paróquia</span>
+        <span class="acc-chevron"><i class="fas fa-chevron-down"></i></span>
+      </button>
+      <div class="accordion-panel" id="acc-padres" role="region" hidden>
+        <div class="accordion-body">
+          <ol class="priests-list">
+            <li><time>02-10-1900</time><span>João Cavalcante de Albuquerque Maranhão</span></li>
+            <li><time>13-04-1913</time><span>Manoel Cristovam Ribeiro Ventura</span></li>
+            <li><time>20-06-1913</time><span>Antonio Francisco de Barros Ramalho</span></li>
+            <li><time>02-03-1919</time><span>Jorge Borges Sales</span></li>
+            <li><time>04-02-1923</time><span>Gentil de Barros Moreira</span></li>
+            <li><time>03-02-1928</time><span>Cônego Pedro Cardoso</span></li>
+            <li><time>03-03-1941</time><span>Antonio Costa</span></li>
+            <li><time>12-09-1943</time><span>Cônego José Betânio de Gouveia Nóbrega</span></li>
+            <li><time>16-01-1944</time><span>Edgar Toscano</span></li>
+            <li><time>06-03-1946</time><span>Cônego Theodomiro de Queirós</span></li>
+            <li><time>23-01-1949</time><span>Cornélio Farias Belo</span></li>
+            <li><time>05-08-1960</time><span>Hidelbrando Rodrigues de Oliveira</span></li>
+            <li><time>09-11-1962</time><span>Aloísio Catão Torquato</span></li>
+            <li><time>26-03-1967</time><span>José Paulino Batista</span></li>
+            <li><time>01-01-1968</time><span>João Maria Cauchi</span></li>
+            <li><time>23-06-1968</time><span>Conrado Wynannds</span></li>
+            <li><time>17-04-1994</time><span>Severino Marques de Farias</span></li>
+            <li><time>07-04-2002</time><span>Frei Domingos Fragoso</span></li>
+            <li><time>21-02-2005</time><span>Dom Epaminondas José de Araújo</span></li>
+            <li><time>27-08-2006</time><span>Bernardo Alves da Silva</span></li>
+            <li><time>10-02-2008</time><span>João Batista da Silva</span></li>
+            <li><time>20-02-2015</time><span>Pedro Alexandre da Silva</span></li>
+            <li><time>09-11-2016</time><span>Iran de Sousa Ferreira</span></li>
+            <li><time>17-07-2019</time><span>Paulo Roberto da Silva</span></li>
+            <li><time>21-12-2021</time><span>Paulo José de Lima</span></li>
+            <li class="current"><time>29-06-2025</time><span>Heriberto Gomes da Costa <em>(atual)</em></span></li>
+          </ol>
+        </div>
       </div>
     </section>
+
+    <!-- Priest Profile -->
+    <section class="section priest-section" aria-label="Padre atual">
+      <div class="priest-card">
+        <div class="priest-photo-wrap">
+          <img
+            src="https://raw.githubusercontent.com/ligiakaylanne/Pascom/maim/images/IMG_3785.JPEG"
+            alt="Pe. Heriberto Gomes da Costa"
+            class="priest-photo"
+            loading="lazy"
+          />
+          <div class="priest-photo-overlay" aria-hidden="true"></div>
+        </div>
+        <div class="priest-info">
+          <p class="priest-label">Administrador Paroquial</p>
+          <h2 class="priest-name">Pe. Heriberto<br>Gomes da Costa</h2>
+          <p class="priest-since"><i class="fas fa-calendar-check"></i> Desde 29 de junho de 2025</p>
+          <p class="priest-parish">Sagrado Coração de Jesus<br><span>Serraria, PB</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section gallery-section" aria-label="Galeria">
+      <div class="section-header">
+        <h2 class="section-title"><i class="fas fa-images"></i> Galeria</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item gallery-item--tall">
+          <img
+            src="https://raw.githubusercontent.com/ligiakaylanne/Pascom/maim/images/IMG_7068.png"
+            alt="Nossa Senhora – Igreja Sagrado Coração"
+            loading="lazy"
+          />
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://raw.githubusercontent.com/ligiakaylanne/Pascom/maim/images/IMG_7434.png"
+            alt="Altar lateral – São José"
+            loading="lazy"
+          />
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://raw.githubusercontent.com/ligiakaylanne/Pascom/maim/images/IMG_5531.png"
+            alt="Altar-Mor – Igreja Sagrado Coração"
+            loading="lazy"
+          />
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://raw.githubusercontent.com/ligiakaylanne/Pascom/maim/images/IMG_4229.png"
+            alt="Altar com flores – Evento PASCOM"
+            loading="lazy"
+          />
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://raw.githubusercontent.com/ligiakaylanne/Pascom/maim/images/IMG_3455.png"
+            alt="Ostensório – Adoração ao Santíssimo"
+            loading="lazy"
+          />
+          <div class="gallery-overlay"></div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
+  <!-- ── FOOTER ── -->
   <footer class="footer">
-    <p>© 2025 PARÓQUIA Sagrado Coração de Jesus - Serraria, PB</p>
-        <p style="margin-top: 0.4rem; font-size: 0.7rem; opacity: 0.5; font-weight: 300; letter-spacing: 0.03em;">Desenvolvido por Ligia Kaylanne</p>
-
+    <div class="footer-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 30" preserveAspectRatio="none">
+        <path d="M0 30 Q300 0 600 15 Q900 30 1200 0 L1200 30 Z" fill="currentColor"/>
+      </svg>
+    </div>
+    <div class="footer-inner">
+      <p class="footer-copy">© 2025 Paróquia Sagrado Coração de Jesus · Serraria, PB</p>
+      <p class="footer-credit">Desenvolvido por <strong>Ligia Kaylanne</strong></p>
+    </div>
   </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagem ampliada" hidden>
+    <button class="lightbox-close" id="lb-close" aria-label="Fechar"><i class="fas fa-times"></i></button>
+    <img class="lightbox-img" id="lb-img" src="" alt="">
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
