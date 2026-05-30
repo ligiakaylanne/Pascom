@@ -248,46 +248,122 @@ img {
 .whatsapp:hover  { background: #25D366; border-color: #25D366; box-shadow: 0 4px 16px rgba(37,211,102,.4); }
 .instagram:hover { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); border-color: transparent; box-shadow: 0 4px 16px rgba(220,39,67,.4); }
 
-/* Mass strip */
-.mass-strip {
+/* ── MISSA SECTION ── */
+.missa-section {
   position: relative;
   z-index: 2;
-  background: rgba(0,0,0,.22);
-  border-top: 1px solid rgba(201,168,76,.2);
-  backdrop-filter: blur(4px);
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-}
-.mass-strip::-webkit-scrollbar { display: none; }
-
-.mass-strip-inner {
-  display: flex;
-  gap: 0;
-  padding: .6rem 1.25rem;
-  max-width: 900px;
-  margin: 0 auto;
-  width: max-content;
-  min-width: 100%;
+  background: var(--ivory-mid);
+  border-top: 3px solid var(--gold);
+  border-bottom: 1px solid var(--stone);
+  padding: 1.25rem 1.1rem 1.4rem;
 }
 
-.mass-pill {
+.missa-header {
   display: flex;
   align-items: center;
-  gap: .45rem;
-  padding: .35rem .85rem;
-  font-size: .75rem;
-  color: rgba(255,255,255,.88);
-  white-space: nowrap;
-  border-right: 1px solid rgba(255,255,255,.1);
-  flex-shrink: 0;
+  gap: .55rem;
+  margin-bottom: 1rem;
+  justify-content: center;
 }
-.mass-pill:last-child { border-right: none; }
-.mass-pill i {
-  color: var(--gold-light);
+.missa-header i {
+  color: var(--crimson);
+  font-size: 1.05rem;
+}
+.missa-header h2 {
+  font-family: 'Cinzel', serif;
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--crimson);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.missa-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .65rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.missa-item {
+  background: #fff;
+  border-radius: var(--r-md);
+  padding: .9rem .7rem .85rem;
+  text-align: center;
+  border: 1.5px solid var(--stone);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .2rem;
+  box-shadow: 0 2px 8px rgba(139,0,0,.06);
+  position: relative;
+  overflow: hidden;
+}
+.missa-item::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--crimson), var(--gold));
+}
+.missa-item--wide {
+  grid-column: span 3;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  padding: .75rem 1rem;
+}
+.missa-item--wide .missa-tipo {
+  font-size: .82rem;
+}
+
+.missa-dia {
+  font-family: 'Cinzel', serif;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.missa-hora {
+  font-family: 'Cinzel', serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: var(--crimson);
+  line-height: 1;
+  margin: .15rem 0;
+}
+.missa-sep {
+  font-size: .75rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin: 0 .2rem;
+}
+
+.missa-tipo {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+}
+.missa-tipo--especial {
+  color: var(--gold);
+}
+.missa-tipo--especial i {
+  font-size: .65rem;
+}
+.missa-tipo--criancas {
+  color: #2E7D32;
+}
+.missa-tipo--criancas i {
   font-size: .7rem;
 }
-.mass-pill strong { color: #fff; }
 
 /* ── MAIN ── */
 .main {
@@ -867,9 +943,11 @@ img {
 
   .header-title { font-size: 1.6rem; }
 
-  .mass-strip-inner {
-    width: auto;
-    justify-content: center;
+  .missa-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .missa-item--wide {
+    grid-column: span 4;
   }
 
   .gallery-grid {
